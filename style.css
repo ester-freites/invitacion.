@@ -1,0 +1,86 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 40px;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pill p {
+    color: #ffffffec;
+    font-size: 25px;
+    font-family: cursive;
+    margin-right: 20px;
+}
+
+.led {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .4),
+        0 2px 1px rgba(0, 0, 0, .08);
+}
+
+.led::after {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 48px;
+    border-radius: 100%;
+    margin: 4px auto;
+    background: rgba(255, 255, 255, 0.356);
+    background: linear-gradient(odeg,
+            rgba(255, 255, 255, .2) 0%,
+            rgba(255, 255, 255, .8) 100%);
+}
+
+/* led derecha */
+.led-blue {
+    position: relative;
+    background: rgb(255, 255, 0);
+    background: linear-gradient(0deg,
+            rgba(255, 243, 255, 1) 0%),
+        rgba(255, 255, 0, 0.945) 100%;
+}
+
+.led-blue.on {
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.87) 0%,
+            rgba(255, 243, 255, 0.904) 50%,
+            rgba(255, 255, 0, 0.836) 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .4),
+        0 2px 1px rgba(0, 0, 0, .08),
+        0 0 30px rgba(255, 255, 0, 0.836),
+        0 0 5px 5px rgba(255, 255, 255, 0.911);
+}
+
+/* led izquierda */
+.led-red {
+    position: relative;
+    background: rgb(255, 255, 0);
+    background: linear-gradient(0deg,
+            rgba(255, 243, 255, 1) 0%),
+        rgba(255, 255, 0, 0.945) 100%;
+}
+
+.led-red.on {
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.897) 0%,
+            rgba(255, 243, 255, 0.925) 50%,
+            rgba(255, 255, 0, 0.836) 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .4),
+        0 2px 1px rgba(0, 0, 0, .08),
+        0 0 30px rgba(255, 255, 0, 0.836),
+        0 0 5px 5px rgba(255, 255, 255, 0.925);
+}
+
+
+
